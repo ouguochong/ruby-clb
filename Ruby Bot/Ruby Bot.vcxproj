@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C5EBA96C-A7A5-4B8C-B096-822E50994112}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>RubyBot</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>G:\Programming\Dependencies\nana 1.1.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>G:\Programming\Dependencies\nana 1.1.3\build\bin\vc2013\nana_Release_x86.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;_STL_SECURE_NO_WARNINGS;_XDEF_NEXONLOGIN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>G:\Programming\Dependencies\LuaBind\luabind\include;G:\Programming\Dependencies\LuaBind\lua\include;G:\Programming\Dependencies\LuaBind\boost\include;G:\Programming\Dependencies\nana 1.1.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UndefinePreprocessorDefinitions>%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>G:\Programming\Dependencies\nana 1.1.3\build\bin\vc2013\nana_Release_x86.lib;G:\Programming\Dependencies\LuaBind\lua\msvc-13.0-x86\lua.release.lib;G:\Programming\Dependencies\LuaBind\luabind\msvc-13.0-x86\luabind.release.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="crc32.cpp" />
+    <ClCompile Include="game_stage.cpp" />
+    <ClCompile Include="instance_widget.cpp" />
+    <ClCompile Include="login_stage.cpp" />
+    <ClCompile Include="main_form.cpp" />
+    <ClCompile Include="maplestory_pool.cpp" />
+    <ClCompile Include="maple_client.cpp" />
+    <ClCompile Include="nexon_api\NMCOClientObject.cpp" />
+    <ClCompile Include="nexon_api\NMCOHelpers.cpp" />
+    <ClCompile Include="nexon_api\NMCRChatRoom.cpp" />
+    <ClCompile Include="nexon_api\NMCSChatSession.cpp" />
+    <ClCompile Include="nexon_api\NMDataObject.cpp" />
+    <ClCompile Include="nexon_api\NMEventHandler.cpp" />
+    <ClCompile Include="nexon_api\NMEventObject.cpp" />
+    <ClCompile Include="nexon_api\NMFDSFileDownloadSession.cpp" />
+    <ClCompile Include="nexon_api\NMFiles.cpp" />
+    <ClCompile Include="nexon_api\NMFunctionObject.cpp" />
+    <ClCompile Include="nexon_api\NMFUSFileUploadSession.cpp" />
+    <ClCompile Include="nexon_api\NMGSGeneralSession.cpp" />
+    <ClCompile Include="nexon_api\NMManager.cpp" />
+    <ClCompile Include="nexon_api\NMSerializable.cpp" />
+    <ClCompile Include="nexon_api\NMWSWBSession.cpp" />
+    <ClCompile Include="overview_tab.cpp" />
+    <ClCompile Include="packet_crypto.cpp" />
+    <ClCompile Include="packet_flow_tab.cpp" />
+    <ClCompile Include="packet_reader.cpp" />
+    <ClCompile Include="packet_writer.cpp" />
+    <ClCompile Include="lua_script.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="rijndael.cpp" />
+    <ClCompile Include="stage_base.cpp" />
+    <ClCompile Include="system_info.cpp" />
+    <ClCompile Include="tcp_handler.cpp" />
+    <ClCompile Include="tcp_socket.cpp" />
+    <ClCompile Include="utility.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="account.hpp" />
+    <ClInclude Include="channel_info.hpp" />
+    <ClInclude Include="character_data.hpp" />
+    <ClInclude Include="character_info.hpp" />
+    <ClInclude Include="config.hpp" />
+    <ClInclude Include="crc32.hpp" />
+    <ClInclude Include="game_stage.hpp" />
+    <ClInclude Include="instance_widget.hpp" />
+    <ClInclude Include="login_stage.hpp" />
+    <ClInclude Include="maplestory_pool.hpp" />
+    <ClInclude Include="maple_client.hpp" />
+    <ClInclude Include="overview_tab.hpp" />
+    <ClInclude Include="packet_flow_tab.hpp" />
+    <ClInclude Include="tcp_handler.hpp" />
+    <ClInclude Include="nexon_api\NMCOClientObject.h" />
+    <ClInclude Include="nexon_api\NMCOHelpers.h" />
+    <ClInclude Include="nexon_api\NMCONew.h" />
+    <ClInclude Include="nexon_api\NMCRChatRoom.h" />
+    <ClInclude Include="nexon_api\NMCSChatSession.h" />
+    <ClInclude Include="nexon_api\NMDataObject.h" />
+    <ClInclude Include="nexon_api\NMEventHandler.h" />
+    <ClInclude Include="nexon_api\NMEventObject.h" />
+    <ClInclude Include="nexon_api\NMFDSFileDownloadSession.h" />
+    <ClInclude Include="nexon_api\NMFunctionObject.h" />
+    <ClInclude Include="nexon_api\NMFUSFileUploadSession.h" />
+    <ClInclude Include="nexon_api\NMGeneral.h" />
+    <ClInclude Include="nexon_api\NMGSGeneralSession.h" />
+    <ClInclude Include="nexon_api\NMManager.h" />
+    <ClInclude Include="nexon_api\NMSerializable.h" />
+    <ClInclude Include="nexon_api\NMWSWBSession.h" />
+    <ClInclude Include="nexon_api\PCH.h" />
+    <ClInclude Include="opcodes.hpp" />
+    <ClInclude Include="packet_crypto.hpp" />
+    <ClInclude Include="packet_reader.hpp" />
+    <ClInclude Include="packet_writer.hpp" />
+    <ClInclude Include="lua_script.hpp" />
+    <ClInclude Include="main_form.hpp" />
+    <ClInclude Include="resource.hpp" />
+    <ClInclude Include="rijndael.hpp" />
+    <ClInclude Include="rijndael_tables.hpp" />
+    <ClInclude Include="session.hpp" />
+    <ClInclude Include="stage_base.hpp" />
+    <ClInclude Include="system_info.hpp" />
+    <ClInclude Include="tcp_socket.hpp" />
+    <ClInclude Include="utility.hpp" />
+    <ClInclude Include="world_info.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
