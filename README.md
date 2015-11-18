@@ -1,4 +1,4 @@
-# ruby-bot
+# ruby-clb
 A LUA-scriptable bot for MapleStory Europe
 
 ## dependencies
